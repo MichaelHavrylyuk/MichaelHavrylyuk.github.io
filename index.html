@@ -1,1 +1,270 @@
-<h1>Hello World</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Michael Havrylyuk — mechanical design, robotics, fabrication, and engineering projects.">
+  <meta name="theme-color" content="#ffeed9">
+  <meta property="og:title" content="Michael Havrylyuk — Engineering Portfolio">
+  <meta property="og:description" content="Mechanical systems designed, built, tested, and iterated.">
+  <meta property="og:type" content="website">
+  <title>Michael Havrylyuk — Engineering Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%23483058%22/><text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2252%22 font-weight=%22700%22 fill=%22%23ffeed9%22>MH</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="wordmark" href="#top" aria-label="Michael Havrylyuk, home">
+      <span class="wordmark-mark" aria-hidden="true">MH</span>
+      <span>Michael Havrylyuk</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span>Menu</span><i aria-hidden="true"></i>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+      <a href="#work">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-slides" aria-live="polite" data-carousel>
+        <div class="hero-slide is-active" data-slide>
+          <img src="assets/images/printer-hero.webp" alt="Insulated chamber inside Michael's high-temperature 3D printer" width="1200" height="1600">
+        </div>
+        <div class="hero-slide" data-slide>
+          <img src="assets/images/oven-controller.webp" alt="PID annealing oven with a custom KlipperScreen controller" width="1600" height="1200">
+        </div>
+        <div class="hero-slide" data-slide>
+          <img src="assets/images/reefscape-build.webp" alt="Reefscape climbing mechanism installed on a competition robot" width="1200" height="1600">
+        </div>
+        <div class="hero-slide" data-slide>
+          <img src="assets/images/sk-robot.webp" alt="Completed SK Robotics robot and coral-handling mechanisms" width="1200" height="1600">
+        </div>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Michael Havrylyuk</h1>
+        <p>Mechanical Engineer</p>
+      </div>
+      <button class="carousel-arrow carousel-prev" type="button" aria-label="Show previous image" data-carousel-prev><span aria-hidden="true">←</span></button>
+      <button class="carousel-arrow carousel-next" type="button" aria-label="Show next image" data-carousel-next><span aria-hidden="true">→</span></button>
+      <p class="carousel-status" data-carousel-status><span>01</span> / 04</p>
+    </section>
+
+    <section class="metrics" aria-label="Portfolio highlights">
+      <div><strong>11×</strong><span>stiffness-to-weight<br>improvement</span></div>
+      <div><strong>70°C</strong><span>3D printer chamber<br>temperature</span></div>
+      <div><strong>#17</strong><span>world climbing<br>performance</span></div>
+      <div><strong>1st</strong><span>event win for first<br>swerve robot</span></div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <header class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span></span> Selected work / 2022—present</p>
+          <h2 id="work-title">Built through<br><em>iteration.</em></h2>
+        </div>
+        <p>From high-temperature additive manufacturing to competition robotics: every project is a cycle of research, design, fabrication, and proof.</p>
+      </header>
+
+      <article class="feature feature-printer" id="printer">
+        <div class="project-number reveal">01</div>
+        <div class="feature-copy reveal">
+          <p class="project-type">Independent project · Additive manufacturing</p>
+          <h3>High-temp<br>3D printer</h3>
+          <p class="project-lede">Several years of rebuilding and iteration turned a custom printer into a dependable high-temperature machine.</p>
+          <p>Its 70°C chamber enables strong ABS and ASA parts with superior layer adhesion. The process combined mechanical design, simulation, control tuning, and resonance analysis.</p>
+          <ul class="skill-list" aria-label="Skills used">
+            <li>Fusion 360 CAD + FEA</li><li>ANSYS + SimScale CFD</li><li>Klipper configuration</li><li>Thermodynamics</li><li>Soldering</li><li>Resonance analysis</li>
+          </ul>
+        </div>
+        <div class="feature-media reveal" data-delay="1">
+          <button class="media-main image-button" type="button" data-lightbox="assets/images/printer-hero.webp" data-caption="V2 — 70°C chamber">
+            <img src="assets/images/printer-hero.webp" alt="Interior of the insulated V2 printer at 70 degrees Celsius" loading="lazy" width="1200" height="1600">
+            <span>V2 — 70°C chamber</span>
+          </button>
+        </div>
+        <div class="iteration-history reveal">
+          <h4>Previous versions</h4>
+          <div class="iteration-strip">
+            <figure>
+              <button class="image-button" type="button" data-lightbox="assets/images/printer-v1.webp" data-caption="V1"><img src="assets/images/printer-v1.webp" alt="Version 1 of the custom 3D printer" loading="lazy"></button>
+              <figcaption>V1</figcaption>
+            </figure>
+            <figure>
+              <button class="image-button" type="button" data-lightbox="assets/images/printer-build.webp" data-caption="V1 — External Chamber"><img src="assets/images/printer-build.webp" alt="Version 1 printer inside an external insulated chamber" loading="lazy"></button>
+              <figcaption>V1 — External Chamber</figcaption>
+            </figure>
+            <figure>
+              <button class="image-button" type="button" data-lightbox="assets/images/printer-v2.webp" data-caption="V2"><img src="assets/images/printer-v2.webp" alt="Version 2 enclosed custom 3D printer" loading="lazy"></button>
+              <figcaption>V2</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-study case-study-dark" id="pid-oven">
+        <div class="case-photo image-button reveal" role="button" tabindex="0" data-lightbox="assets/images/oven-controller.webp" data-caption="PID annealing oven with KlipperScreen interface">
+          <img src="assets/images/oven-controller.webp" alt="Convection oven converted into a PID-controlled annealing oven" loading="lazy" width="1600" height="1200">
+          <span class="photo-label">Working prototype / KlipperScreen UI</span>
+        </div>
+        <div class="case-copy reveal" data-delay="1">
+          <p class="project-type">Independent project · Materials research</p>
+          <h3>PID<br>annealing oven</h3>
+          <dl class="process-list">
+            <div><dt>Problem</dt><dd>Make polymer annealing repeatable enough to optimize strength and heat-deflection temperature—and practical enough to become a product.</dd></div>
+            <div><dt>Process</dt><dd>Retrofit a convection oven with 3D-printer electronics, install Klipper, tune the controller, and build an intuitive KlipperScreen interface.</dd></div>
+            <div><dt>Result</dt><dd>Characterized PPS-CF and PET-CF across annealing temperatures and identified sulfur dioxide deposits in high-temperature PPS-CF samples.</dd></div>
+          </dl>
+          <div class="case-thumbs">
+            <button class="image-button" type="button" data-lightbox="assets/images/oven-electronics.webp" data-caption="Oven control electronics"><img src="assets/images/oven-electronics.webp" alt="Electronics installed inside the PID oven controller" loading="lazy"></button>
+            <button class="image-button" type="button" data-lightbox="assets/images/oven-testing.webp" data-caption="Annealing profile testing"><img src="assets/images/oven-testing.webp" alt="Laptops monitoring an annealing test" loading="lazy"></button>
+            <button class="image-button" type="button" data-lightbox="assets/images/oven-microscope.webp" data-caption="Microscope inspection of annealed PPS-CF"><img src="assets/images/oven-microscope.webp" alt="Microscope view of an annealed PPS-CF sample" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-study case-study-light" id="ntop">
+        <div class="case-copy reveal">
+          <p class="project-type">UW Advanced Robotics · Engineer Squad</p>
+          <h3>Topology<br>optimization</h3>
+          <p class="result-callout"><strong>11×</strong><span>increase in<br>stiffness-to-weight ratio</span></p>
+          <dl class="process-list">
+            <div><dt>Problem</dt><dd>Robot mass was at a premium. Save weight without surrendering stiffness.</dd></div>
+            <div><dt>Process</dt><dd>Build rough geometry in SolidWorks, create an nTop optimization notebook, run topology optimization, then export and clean the result in SolidWorks.</dd></div>
+          </dl>
+        </div>
+        <div class="topology-sequence reveal" data-delay="1">
+          <figure><img src="assets/images/ntop-start.webp" alt="Initial solid bracket geometry" loading="lazy"><figcaption><span>01</span> Design space</figcaption></figure>
+          <figure><img src="assets/images/ntop-optimized-a.webp" alt="Topology optimized bracket mesh" loading="lazy"><figcaption><span>02</span> Optimize</figcaption></figure>
+          <figure><img src="assets/images/ntop-final.webp" alt="Final cleaned topology optimized bracket" loading="lazy"><figcaption><span>03</span> Refine</figcaption></figure>
+        </div>
+      </article>
+
+      <div class="robotics-intro reveal" id="robotics">
+        <div>
+          <p class="eyebrow"><span></span> FRC Team 2811 · Stormbots</p>
+          <h3>Competition<br><em>robotics.</em></h3>
+        </div>
+        <p>Mechanical Design &amp; Build Lead. Rapid prototyping under strict dimensional, performance, and schedule constraints.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-wide media-square reveal">
+          <button class="card-image image-button" type="button" data-lightbox="assets/images/reefscape-cad.webp" data-caption="Reefscape climber CAD">
+            <img src="assets/images/reefscape-cad.webp" alt="CAD model of the Reefscape climbing mechanism" loading="lazy">
+            <span class="card-year">2025</span><span class="expand">View image ↗</span>
+          </button>
+          <div class="card-copy">
+            <p class="project-type">05 iterations</p><h4>Reefscape climber</h4>
+            <p>Climb a metal cage using only its poles or bottom. Prototyped in wood and metal, then designed in Fusion 360.</p>
+            <p class="card-result"><span>Outcome</span> Consistent, easy climbing.</p>
+          </div>
+          <img class="card-secondary" src="assets/images/reefscape-build.webp" alt="Reefscape climbing mechanism mounted on the robot" loading="lazy">
+        </article>
+
+        <article class="project-card media-portrait reveal">
+          <button class="card-image image-button" type="button" data-lightbox="assets/images/crescendo-climber-cad.webp" data-caption="Crescendo climber CAD">
+            <img src="assets/images/crescendo-climber-cad.webp" alt="CAD model of the Crescendo climber" loading="lazy"><span class="card-year">2024</span><span class="expand">View image ↗</span>
+          </button>
+          <div class="card-copy"><p class="project-type">03 iterations</p><h4>Crescendo climber</h4><p>Reach a 27-inch chain from below a 24-inch starting height while preserving access to the high goal.</p><p class="card-result"><span>Outcome</span> Ranked 17th of 3,477 worldwide for climbing performance. The robot earned one first-place and two second-place event finishes.</p></div>
+        </article>
+
+        <article class="project-card media-tall reveal" data-delay="1">
+          <button class="card-image image-button" type="button" data-lightbox="assets/images/crescendo-intake.webp" data-caption="Crescendo bidirectional intake CAD">
+            <img src="assets/images/crescendo-intake.webp" alt="CAD model of the Crescendo intake" loading="lazy"><span class="card-year">2024</span><span class="expand">View image ↗</span>
+          </button>
+          <div class="card-copy"><p class="project-type">04 iterations</p><h4>Crescendo intake</h4><p>Pick up foam rings from either direction. Wheel and roller prototypes led to a compact Fusion 360 design.</p><p class="card-result"><span>Outcome</span> Jam-free, high-throughput acquisition with a climb-scoring mechanism. The robot earned one first-place and two second-place event finishes.</p></div>
+        </article>
+
+        <article class="project-card project-card-photo media-wide reveal">
+          <button class="card-image image-button" type="button" data-lightbox="assets/images/swerve-drive.webp" data-caption="Stormbots’ first swerve-drive robot">
+            <img src="assets/images/swerve-drive.webp" alt="Stormbots first swerve-drive competition robot" loading="lazy"><span class="card-year">Offseason</span><span class="expand">View image ↗</span>
+          </button>
+          <div class="card-copy"><p class="project-type">Lead designer · Builder · Driver</p><h4>First swerve base</h4><p>Designed for Charged Up to be built as quickly and economically as possible.</p><p class="card-result"><span>Outcome</span> Won its first and only event.</p></div>
+        </article>
+
+        <article class="project-card media-standard reveal" data-delay="1">
+          <button class="card-image image-button" type="button" data-lightbox="assets/images/roller-claw-cad.webp" data-caption="Charged Up roller claw CAD">
+            <img src="assets/images/roller-claw-cad.webp" alt="CAD assembly of the Charged Up roller claw" loading="lazy"><span class="card-year">2023</span><span class="expand">View image ↗</span>
+          </button>
+          <div class="card-copy"><p class="project-type">02 iterations</p><h4>Charged Up roller claw</h4><p>Acquire cones and inflatable cubes from both the floor and a shelf with one mechanism.</p><p class="card-result"><span>Outcome</span> Reliable pneumatic claw mounted to a pivoting wrist. The robot earned a second-place event finish.</p></div>
+        </article>
+
+        <article class="project-card project-card-horizontal media-ultrawide reveal">
+          <button class="card-image image-button" type="button" data-lightbox="assets/images/rapid-react.webp" data-caption="Rapid React passthrough CAD">
+            <img src="assets/images/rapid-react.webp" alt="CAD assembly of the Rapid React ball passthrough" loading="lazy"><span class="card-year">2022</span><span class="expand">View image ↗</span>
+          </button>
+          <div class="card-copy"><p class="project-type">02 iterations</p><h4>Rapid React passthrough</h4><p>Transfer 24 cm balls from two sources, stage them for the shooter, and keep the assembly very light.</p><p class="card-result"><span>Outcome</span> Reliable acquisition from both sides.</p></div>
+        </article>
+      </div>
+
+      <article class="sk-robotics" id="sk-robotics">
+        <header class="sk-header reveal">
+          <p class="eyebrow"><span></span> Offseason FRC Team 9999 · SK Robotics</p>
+          <h3>One robot.<br><em>Three systems.</em></h3>
+          <p>Mechanical design for fast, precise handling of PVC “coral” from arbitrary ground orientations to repeatable scoring positions.</p>
+        </header>
+        <div class="sk-systems">
+          <article class="system-card reveal">
+            <span class="system-no">01</span><img src="assets/images/sk-elevator.webp" alt="CAD model of the dual-motor elevator" loading="lazy"><h4>Elevator</h4><p>Dual-motor drive with an internally routed HTD5 belt and continuous rigging for four scoring heights.</p>
+          </article>
+          <article class="system-card reveal" data-delay="1">
+            <span class="system-no">02</span><img src="assets/images/sk-intake.webp" alt="CAD model of the coral intake" loading="lazy"><h4>Intake</h4><p>Fast acquisition from any orientation, with a fold-away response if the mechanism collides.</p>
+          </article>
+          <article class="system-card reveal" data-delay="2">
+            <span class="system-no">03</span><img src="assets/images/sk-passthrough.webp" alt="CAD model of the coral passthrough" loading="lazy"><h4>Passthrough</h4><p>Independent sides detect and clear jams; a 3D-printed carrier locks coral into a repeatable position.</p>
+          </article>
+        </div>
+        <div class="sk-build reveal">
+          <img src="assets/images/sk-robot.webp" alt="Completed SK Robotics robot with coral game piece" loading="lazy">
+          <p><span>From screen to shop floor</span>Integrated SK Robotics mechanisms in the completed robot, which won two events.</p>
+        </div>
+      </article>
+
+      <section class="small-projects" aria-labelledby="small-projects-title">
+        <header class="section-heading compact reveal">
+          <div><p class="eyebrow"><span></span> Side projects</p><h2 id="small-projects-title">Always<br><em>building.</em></h2></div>
+          <p>Smaller projects are where new tools, processes, and constraints become practical skills.</p>
+        </header>
+        <div class="small-grid">
+          <article class="small-card reveal">
+            <div class="small-card-images">
+              <button class="image-button" type="button" data-lightbox="assets/images/led-install.webp" data-caption="Waterproof retaining-wall LED installation"><img src="assets/images/led-install.webp" alt="Blue and yellow LEDs installed along a retaining wall" loading="lazy"></button>
+              <img src="assets/images/led-pcb.webp" alt="Fusion 360 rendering of the custom LED controller PCB" loading="lazy">
+            </div>
+            <div class="small-card-copy"><span class="project-number">07</span><div><p class="project-type">Electronics · Outdoor installation</p><h3>Retaining wall LEDs</h3><ul class="skill-list"><li>Soldering</li><li>Fusion 360 PCB</li><li>Waterproofing</li><li>ESPHome</li><li>Scalable design</li></ul></div></div>
+          </article>
+          <article class="small-card reveal" data-delay="1">
+            <div class="small-card-images longboard-images">
+              <button class="image-button" type="button" data-lightbox="assets/images/longboard-bottom.webp" data-caption="Electric longboard drivetrain and battery layout"><img src="assets/images/longboard-bottom.webp" alt="Bottom view of the custom electric longboard" loading="lazy"></button>
+              <img src="assets/images/longboard-remote.webp" alt="Hand-built electric longboard remote" loading="lazy">
+            </div>
+            <div class="small-card-copy"><span class="project-number">08</span><div><p class="project-type">Personal mobility · Mechatronics</p><h3>Electric longboard</h3><ul class="skill-list"><li>3D printing</li><li>Inventor</li><li>Spot welding</li><li>Programming</li><li>VESC configuration</li></ul></div></div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-links">
+      <a href="contact.html">Email <span aria-hidden="true">→</span></a>
+      <a href="https://github.com/MichaelHavrylyuk" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="https://www.linkedin.com/in/MichaelHavrylyuk/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="footer-base"><p>Michael Havrylyuk</p><p>Mechanical design · Robotics · Fabrication</p><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Image viewer">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer" data-lightbox-close>Close <span aria-hidden="true">×</span></button>
+    <figure><img src="" alt="Expanded project image" data-lightbox-image><figcaption data-lightbox-caption></figcaption></figure>
+  </dialog>
+</body>
+</html>

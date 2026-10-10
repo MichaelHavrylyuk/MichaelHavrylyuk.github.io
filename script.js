@@ -71,6 +71,7 @@ const closeButton = document.querySelector('[data-lightbox-close]');
 let activeTrigger = null;
 
 const openLightbox = (trigger) => {
+  if (!dialog || dialog.open) return;
   activeTrigger = trigger;
   dialogImage.src = trigger.dataset.lightbox;
   dialogImage.alt = trigger.dataset.caption || 'Expanded project image';
@@ -80,11 +81,13 @@ const openLightbox = (trigger) => {
 };
 
 const closeLightbox = () => {
-  if (!dialog) return;
-  dialog.close();
-  document.body.classList.remove('lightbox-open');
-  dialogImage.src = '';
-  if (activeTrigger) activeTrigger.focus();
+  if (!dialog || !dialog.open || dialog.classList.contains('is-closing')) return;
+  if (reducedMotion) {
+    dialog.close();
+    return;
+  }
+  dialog.classList.add('is-closing');
+  window.setTimeout(() => dialog.close(), 200);
 };
 
 document.querySelectorAll('[data-lightbox]').forEach((trigger) => {
@@ -104,5 +107,15 @@ if (dialog) {
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) closeLightbox();
   });
-  dialog.addEventListener('close', () => document.body.classList.remove('lightbox-open'));
+  dialog.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeLightbox();
+  });
+  dialog.addEventListener('close', () => {
+    dialog.classList.remove('is-closing');
+    document.body.classList.remove('lightbox-open');
+    dialogImage.removeAttribute('src');
+    if (activeTrigger) activeTrigger.focus({ preventScroll: true });
+    activeTrigger = null;
+  });
 }
